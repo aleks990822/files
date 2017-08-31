@@ -1,3 +1,9 @@
+  
+@IBOutlet weak var text: UITextView!
+
+  imageText(text: your text)
+
+  
   func imageText(text:String) {
         
         let style = NSMutableParagraphStyle()
