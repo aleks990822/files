@@ -1,0 +1,32 @@
+  func imageText(text:String) {
+        
+        let style = NSMutableParagraphStyle()
+        
+        let myFont = UIFont(name: "roboto-Light", size: 19)
+        
+
+        let attributedString = NSMutableAttributedString(string: text, attributes: [NSParagraphStyleAttributeName:style, NSFontAttributeName: myFont!])
+        
+        let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        
+        let matches = detector?.matches(in: text, options: .reportCompletion, range:NSRange(location: 0, length: text.characters.count))
+        
+                for match in matches! {
+                    
+                    let textAttachment = NSTextAttachment.init()
+                    
+                    let data = NSData(contentsOf: (match.url!))
+                    if data != nil{
+                        let image = UIImage(data: data! as Data)
+                        
+                        textAttachment.bounds = CGRect(x: 0.0, y: 0, width: 300, height: 200)
+                        textAttachment.image = image
+                        let attributedStringWithImage = NSAttributedString(attachment: textAttachment)
+                        attributedString.replaceCharacters(in: (match.range), with: attributedStringWithImage)
+                        
+                    }
+            }
+        
+        self.text.attributedText = attributedString
+
+}
