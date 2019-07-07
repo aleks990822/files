@@ -1,10 +1,4 @@
-//
-//  Extension.swift
-//  STMEGI
-//
-//  Created by aleks on 04.05.17.
-//  Copyright © 2017 STMEGI. All rights reserved.
-//
+
 
 import Foundation
 import AVFoundation
