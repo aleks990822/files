@@ -38,7 +38,6 @@ class CVCellDetail: UICollectionViewCell, UITableViewDelegate, UITableViewDataSo
         
     }
     
-    //замена viewDidAppear
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         if superview != nil {
@@ -46,7 +45,7 @@ class CVCellDetail: UICollectionViewCell, UITableViewDelegate, UITableViewDataSo
         }
     }
     
-    //вызывается первым
+    //вызывается из cellForRowAt
     func start(){
         
         setting()
@@ -65,8 +64,9 @@ class CVCellDetail: UICollectionViewCell, UITableViewDelegate, UITableViewDataSo
         
     }
     
-    // задает текста
+    // задает текст
     @objc func info(){
+        
         // текст с фотографиями и видео
         DispatchQueue.global(qos: .userInteractive).async {
             self.textView.convertToInlineImageFormat(htmlString: self.detail?.text ?? "")
@@ -148,6 +148,7 @@ class CVCellDetail: UICollectionViewCell, UITableViewDelegate, UITableViewDataSo
                 }
             }
         }
+        
     }
     
 }
