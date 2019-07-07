@@ -1,10 +1,4 @@
-//
-//  CVCellDetail.swift
-//  STMEGI
-//
-//  Created by Aleks Amirkulov on 25/06/2019.
-//  Copyright © 2019 STMEGI. All rights reserved.
-//
+
 
 import UIKit
 import SDWebImage
