@@ -25,7 +25,7 @@ class CVCellDetail: UICollectionViewCell, UITableViewDelegate, UITableViewDataSo
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        Downloader.shared.deleteSingleTask(url: "https://stmegi.com\(detail!.ImageViewURL!)")
+        Downloader.shared.deleteSingleTask(url: "https://---.com\(detail!.ImageViewURL!)")
         YouTubeManager.shared.removeVideo(textView: textView)
         textView.attributedText = nil
         scrollView.scrollToTop(animated: false)
@@ -77,7 +77,7 @@ class CVCellDetail: UICollectionViewCell, UITableViewDelegate, UITableViewDataSo
         
         
         if detail?.ImageView == nil {
-            Downloader.shared.download(url: "https://stmegi.com\(detail!.ImageViewURL!)") { [weak self] (image) in
+            Downloader.shared.download(url: "https://---.com\(detail!.ImageViewURL!)") { [weak self] (image) in
                 self?.detail?.ImageView = image
                 self?.ImageView.image = image
                 self?.imageSize()
