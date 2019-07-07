@@ -1,10 +1,4 @@
-//
-//  YouTubeManager.swift
-//  STMEGI
-//
-//  Created by Aleks Amirkulov on 07/07/2019.
-//  Copyright © 2019 STMEGI. All rights reserved.
-//
+
 
 import Foundation
 import YouTubePlayer_Swift
